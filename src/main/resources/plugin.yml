@@ -1,0 +1,11 @@
+name: AdvancedGuis
+version: '${project.version}'
+main: dk.nydt.advancedguis.AdvancedGuis
+api-version: 1.8
+softdepend: [ SSCore ]
+authors: [ Nydt ]
+description: Advanced way to make guis and execute certain actions.
+commands:
+  AG:
+    description: Sends help command
+    aliases: [advancedguis, aguis]

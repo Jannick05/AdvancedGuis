@@ -1,0 +1,66 @@
+Messages:
+  help:
+    - "&e&lADVANCED &6&lGUIS"
+    - "&7"
+    - "&8» &f/AG open <GUI>"
+    - "&7"
+    - "&7&oBy Nydt"
+  non-existent:
+    - "&4&lERROR &fGui doesn't exist!"
+  reload:
+    - "&2&lRELOAD &fConfig reloaded!"
+  no-permission:
+    - "&4&lERROR &fPermission denied."
+
+Permissions:
+  reload: "ag.reload"
+
+GUIs:
+  main: #Is case-sensitive, type the exact name in the command.
+    permission: "ag.main.use" #null if no permission
+    name: "&e&lADVANCED &6&lGUIS &8» &7%gui%"
+    rows: 5
+    slots:
+      - 1:
+        slot: 22
+        item: CUSTOM_SKULL
+        value: http://textures.minecraft.net/texture/86870073f3ffffbcb6fdc63127285ff389a029cfdd678d69267d2d489ed5f014
+        name: "&c&lRed Navi"
+        lore:
+          - "&7ok sejt"
+        message: #Use %player% for event-player's name
+          - "Hej"
+          - "&6%player%"
+        p-command: #Player command, don't use / - Use %player% for event-player's name
+          - "pl"
+        c-command: #Console command, don't use / - Use %player% for event-player's name
+          - "msg %player% hej"
+      - 2:
+        slot: 0
+        item: INK_SACK
+        data: 1
+        name: "&4&lBack"
+        lore:
+          - "&7&oTilbage til okaay"
+        message: #Use %player% for event-player's name
+          - "Hej, åbner okaay"
+          - "&6%player%"
+        p-command: #Player command, don't use / - Use %player% for event-player's name
+          - "ag open okaay"
+        c-command: #Console command, don't use / - Use %player% for event-player's name
+          - "msg %player% ret sejt"
+
+  okaay:
+    permission: "null" #null if no permission
+    name: "&e&lADVANCED &6&lGUIS &8» &7%gui%"
+    rows: 3
+    slots:
+      - 1:
+        slot: 13
+        item: INK_SACK
+        data: 3
+        name: "&6Cocoa, back?"
+        lore:
+          - "&aSpurgt"
+        p-command: #Player command, don't use / - Use %player% for event-player's name
+          - "ag open main"
